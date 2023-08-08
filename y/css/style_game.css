@@ -1,0 +1,48 @@
+#menino, #iphone {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  transition: transform 0.3s ease-in-out;
+}
+
+#menino {
+  background-image: url('../images/boy.jpg');
+  background-size: cover;
+  left: 0;
+  top:0;
+}
+
+#iphone {
+  background-image: url('../images/phone.png');
+  background-size: cover;
+  left: 150px;
+  top: 150px;
+}
+
+#placar {
+  position: absolute;
+  top: 10px;
+  left: 200px;
+  font-size: 18px;
+}
+
+#numero {
+  position: absolute;
+  top: 50px;
+  left:200px;
+  font-size: 18px;
+}
+
+#confirmarBotao {
+  position: absolute;
+  top: 50px;
+  left: 500px;
+  font-size: 18px;
+}
+
+#valorInput {
+  position: absolute;
+  top: 10px;
+  left: 500px;
+  font-size: 18px;
+}

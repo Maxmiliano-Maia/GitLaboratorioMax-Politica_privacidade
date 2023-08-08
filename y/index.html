@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="google-site-verification" content="ksk1tM80H_prwwO68av_7YYhXP648kIhyFcyM75IOf0" />
+    <title> Login - Controle de gastos</title>
+</head>
+
+<body class="centralize">
+    <H1>Bem-vindo ao Laboratório de Max</H1>
+    <div id="paragrafo">
+        <p>O Laboratório de Max é um espaço dedicado à divulgação dos diversos projetos criados pelo programador Maxmiliano.<br> 
+        Aqui você encontrará uma variedade de projetos, incluindo jogos educativos e soluções para o mundo corporativo.<br> 
+        Um exemplo notável é o aplicativo "Controle Orçamentário".</p>
+    <p>Para acessar a esse entre os demais projetos e recursos exclusivos, faça o login abaixo:</p>
+    </div>
+    
+    
+    <div class="container">
+        
+        <form>
+            <div class="form-field">
+                <div><label>Email</label></div>
+                <input type="email" name="email" id="email" onchange="onChangeEmail()" placeholder="seu@email.com"/>
+                <div class="error" id="email-required-error">Email é obrigatório</div>
+                <div class="error" id="email-invalid-error">Email é inválido</div>
+            </div>
+            <div class="form-field">
+                <div><label>Senha</label></div>
+                <input type="password" name="password" id="password" onchange= "onChangePassword()" placeholder="Senha"/>
+                <div class="error" id="password-required-error">Senha é obrigatória</div>
+            </div>
+            <div class="form-actions">
+                <button type="button" class="clear" id="recover-password-button" onclick="recoverPassword()" disabled="true"><b>Recuperar senha</b></button>
+                <button type="button" class="solid" id="login-button" disabled="true" onclick="login()">Entrar</button>
+            </div>
+            <div class="register-link">
+                <p>Ainda não tem uma conta? <button type="button" class="outline" onclick="register()">Registrar</button></p>
+            </div>
+        </form>
+    </div>
+</body>
+
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/global.css">
+<link rel="stylesheet" href="./css/home.css">
+
+<script type="text/javascript" charset="utf-8" src="./js/script.js" defer></script>
+<script type="text/javascript" charset="utf-8" src="./js/validations.js" defer></script>
+<script type="text/javascript" charset="utf-8" src="./js/loading.js" defer></script>
+
+<script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-auth-compat.js"></script>
+<script src="firebase-init.js"></script>
+
+</html>

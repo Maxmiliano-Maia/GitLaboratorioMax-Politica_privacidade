@@ -1,0 +1,137 @@
+
+h1{
+    position: absolute;
+    top: 0px; 
+    width: 500px;
+    height: 54px;
+    text-align: right;
+}
+
+#paragrafo{
+    position: absolute;
+    top: 70px; 
+    width: 100%;
+    height: 54px;
+    left: 300px;
+}
+
+
+body{
+    margin: 0;
+    background: linear-gradient(rgba(156, 174, 163, 1.2), rgba(225, 232, 228, 0.7)), 
+    url('../images/laboratorio.jpg') center/cover no-repeat;
+    background-size: 100%; /* Ajuste o valor para dimensionar a imagem */
+    
+}
+
+
+header{
+    text-align: right;
+}
+
+/*so vale p os toes do cabeçalho*/
+header button{
+    width: auto;   
+}
+
+.centralize{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-field{
+    margin-bottom: 10px;
+}
+
+/*Botões prenchem todo o espaço da tela*-------------*/
+input, button,
+select {
+    padding: 10px;
+    width: -webkit-fill-available;
+}
+
+input[type="radio"]{
+    width: auto;
+}
+
+.loading{
+    background: rgb(0,0,0, 0.5);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.loading label {
+    font-size: 24px;
+}
+
+.clear{
+    background: transparent;
+    border: none;
+    color: rgb(9, 27, 11);
+}
+
+.solid{
+    background: white;
+    border: none;
+    color: rgb(57, 67, 57);
+}
+
+.outline{
+    background: transparent;
+    color:rgb(3, 36, 7);
+    border: 1px solid rgb(227, 247, 232);
+}
+
+button:active{
+    opacity: 0.8;
+}
+
+button[disabled]{
+    opacity: 0.7;
+}
+
+button.fab{
+    width: 54px;
+    height: 54px;
+    border-radius: 50px;
+    border: none;
+    font-size: 24px;
+    box-shadow: 2px 2px 2px gray;
+}
+
+#game{
+    position: absolute;
+    top: 560px;
+    
+    left: 1200px;
+    width: 54px;
+    height: 54px;
+    border-radius: 50px;
+    border: none;
+    font-size: 24px;
+    box-shadow: 2px 2px 2px gray;
+    background-color: red;
+}
+
+button.fab.fixed{
+    position: fixed;
+}
+
+button.fab.bottom{
+    bottom: 32px;
+}
+
+
+button.fab.right{
+    right: 32px
+}
+
+.error{
+    color: rgb(56, 40, 192);
+    background-color: rgb(31, 237, 34);
+    display: none; 
+}
+
