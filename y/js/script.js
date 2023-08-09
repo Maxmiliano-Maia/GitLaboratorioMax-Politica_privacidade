@@ -15,7 +15,11 @@ function onChangePassword(){
     togglePasswordErrors();
 }
 
+
+
 function login(){
+
+    const termsAccepted = form.acceptTerms().cheked;
     showLoading();
     firebase.auth().signInWithEmailAndPassword(
            form.email().value, form.password().value
@@ -28,6 +32,11 @@ function login(){
         
     });
 
+    if (!termsAccepted) {
+        alert("Você precisa aceitar os termos de privacidade.");
+        return;
+    }
+
 }
 
 function getErrorMessage(error){
@@ -39,6 +48,11 @@ function getErrorMessage(error){
     }
     return error.message;
 }
+
+function goBack() {
+    window.location.href = "../../index.html";
+    console.log("apertou");
+  }
 
 function register(){
   window.location.href = "pages/register/register.html";
@@ -81,10 +95,12 @@ function togglePasswordErrors(){
 
 function toggleButtonsDisable(){
     const emailValid = isEmailValid();
-    form.recoverPassword().disabled = !emailValid;
-
     const passwordValid = isPasswordValid();
-    form.loginButton().disabled = !emailValid || !passwordValid;
+    const termsAccepted =form.acceptTerms().checked;
+    
+    form.recoverPassword().disabled = !emailValid; 
+    form.loginButton().disabled = !emailValid || !passwordValid || !termsAccepted;
+    console.log(termsAccepted);
 }
 
 function isPasswordValid(){
@@ -104,7 +120,8 @@ function isPasswordValid(){
         loginButton: () => document.getElementById('login-button'),
         password: () => document.getElementById('password'),
         passwordRequiredError: () => document.getElementById('password-required-error'),
-        recoverPassword: () => document.getElementById('recover-password-button')
+        recoverPassword: () => document.getElementById('recover-password-button'),
+        acceptTerms: () => document.getElementById('accept_terms')
     }
 
   
