@@ -13,13 +13,16 @@ function onChangeEmail(){
 function onChangePassword(){
     toggleButtonsDisable();
     togglePasswordErrors();
+    alert("Você precisa aceitar os termos de privacidade.");
+        return;
 }
 
 
 
 function login(){
-
     const termsAccepted = form.acceptTerms().cheked;
+
+    
     showLoading();
     firebase.auth().signInWithEmailAndPassword(
            form.email().value, form.password().value
@@ -32,12 +35,9 @@ function login(){
         
     });
 
-    if (!termsAccepted) {
-        alert("Você precisa aceitar os termos de privacidade.");
-        return;
-    }
-
 }
+
+
 
 function getErrorMessage(error){
     if (error.code == "auth/user-not-found"){
