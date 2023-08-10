@@ -1,10 +1,14 @@
 body{
-    background: rgb(45, 211, 111);
+    background: linear-gradient(rgba(156, 174, 163, 1.2), rgba(225, 232, 228, 0.7)), 
+    url('../images/laboratorio.jpg') center/cover no-repeat;
+    background-size: 100%; /* Ajuste o valor para dimensionar a imagem */
     height: 100vh;
 }
 
 form{
     width: 300px;
+    top: 200px;
+    position: absolute;
 }
 
 input{
@@ -14,4 +18,25 @@ input{
 button{
    cursor: pointer;
    margin-bottom: 10px;
+}
+
+.sair_register{
+   background: transparent;
+    border: none;
+    color: rgb(9, 27, 11);
+    top: 30px;
+    position: absolute;
+    left: 270px;
+}
+
+@media screen and (min-width: 501px) {
+
+    .sair_register{
+        background: transparent;
+         border: none;
+         color: rgb(9, 27, 11);
+         top: 30px;
+         position: absolute;
+         left: 1200px;
+     }
 }
