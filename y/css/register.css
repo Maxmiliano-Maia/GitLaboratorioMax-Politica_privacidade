@@ -7,7 +7,6 @@ body{
 
 form{
     width: 300px;
-    top: 200px;
     position: absolute;
 }
 
@@ -17,26 +16,14 @@ input{
 
 button{
    cursor: pointer;
-   margin-bottom: 10px;
+  
 }
 
 .sair_register{
-   background: transparent;
+    background: transparent;
     border: none;
     color: rgb(9, 27, 11);
-    top: 30px;
-    position: absolute;
-    left: 270px;
-}
-
-@media screen and (min-width: 501px) {
-
-    .sair_register{
-        background: transparent;
-         border: none;
-         color: rgb(9, 27, 11);
-         top: 30px;
-         position: absolute;
-         left: 1200px;
-     }
+    position: relative;
+    top: -160px;
+    left: 150px;
 }
